@@ -19,7 +19,7 @@ const createProduct = async (token, imageId, name, price, color) => {
 
   const data = await res.json();
 
-  if (res.status !== 201) {
+  if (res.status !== 200) {
     toast.error(`${res.status}: ${data.message}`, {
       autoClose: 2000,
     });

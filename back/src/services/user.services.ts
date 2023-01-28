@@ -9,4 +9,15 @@ import ENV from "../env";
 
 const prisma = new PrismaClient();
 
-export default {};
+const create = async (
+  firstname: string,
+  lastname: string,
+  email: string,
+  password: string
+): Promise<Token> => {
+  const token = "";
+
+  return { token };
+};
+
+export default { create };
