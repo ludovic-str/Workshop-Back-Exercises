@@ -32,6 +32,7 @@ export default function DashboardAppPage() {
     const fetchSales = async () => {
       const token = localStorage.getItem('token');
       const sales = await getUserSales(token);
+      if (!sales) return;
       setSales(sales);
     };
     fetchSales();
